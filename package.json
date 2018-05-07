@@ -29,7 +29,8 @@
     "react-imported-component": "^4.2.1",
     "react-prop-types": "^0.4.0",
     "react-router-dom": "^4.2.2",
-    "react-router-hash-link": "^1.2.0"
+    "react-router-hash-link": "^1.2.0",
+    "smoothscroll-polyfill": "^0.4.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

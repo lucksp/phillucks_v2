@@ -1,10 +1,11 @@
 import React from "react";
+import Index from "./Index";
 
 const Home = () => {
   return (
     <div>
-      <div id="home">
-        <section>Main Home stuff</section>
+      <div id="index">
+        <Index />
       </div>
       <div id="about">
         <h1>About</h1>
