@@ -25,28 +25,16 @@ module.exports = {
         use: ["babel-loader"]
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           {
-            loader: "style-loader" // creates style nodes from JS strings
+            loader: "style-loader"
           },
           {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: "css-loader"
           },
           {
-            loader: "sass-loader" // compiles Sass to CSS
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              config: {
-                ctx: {
-                  autoprefixer: {
-                    browsers: "last 2 versions"
-                  }
-                }
-              }
-            }
+            loader: "sass-loader"
           }
         ]
       }

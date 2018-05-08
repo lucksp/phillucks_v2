@@ -5404,6 +5404,12 @@ react-router-dom@^4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
+react-router-hash-link@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-1.2.0.tgz#ce824cc5f0502ce9b0686bb6dd9c08659b24094c"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-router@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
@@ -6011,6 +6017,10 @@ slice-ansi@0.0.4:
 slide@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+
+smoothscroll-polyfill@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.3.tgz#94e5f2d604efcceb53f23ff0380d7ea7280d4bff"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
