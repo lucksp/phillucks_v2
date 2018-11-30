@@ -1,17 +1,22 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import Navibar from "./Navbar/Navibar";
+import Jumbo from "./Jumbotron/Jumbo";
+import About from "./About/About";
+import Projects from "./Projects/Projects";
 
-import Home from "./Home";
-import PageLink from "./PageLink";
+import { Provider } from "redux-zero/react";
+import store from "../redux-zero/store";
 
 const App = () => {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/link/" component={PageLink} />
-      </Switch>
-    </div>
+    <Provider store={store}>
+      <div className="app">
+        <Navibar />
+        <Jumbo />
+        <About />
+        <Projects />
+      </div>
+    </Provider>
   );
 };
 

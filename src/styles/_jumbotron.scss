@@ -1,0 +1,12 @@
+.jumbotron {
+  height: 66vh;
+  display: flex;
+}
+
+.jumbo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
