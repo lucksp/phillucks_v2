@@ -1,0 +1,46 @@
+.projects {
+  .card-deck {
+    @media screen and (max-width: 576px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .card {
+      margin: 0 0 24px 0;
+      .card-subtitle {
+        height: 3.6rem;
+        line-height: 1.2;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        font-weight: 400;
+      }
+      .wrapper-badge {
+        height: 50px;
+        overflow: hidden;
+        margin: 8px 0;
+        @media screen and (max-width: 576px) {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          flex-wrap: wrap;
+          height: 44px;
+        }
+        .badge {
+          margin: 2px;
+          font-weight: 400;
+          @media screen and (max-width: 576px) {
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+      .button-repo {
+        float: right;
+      }
+    }
+  }
+}
