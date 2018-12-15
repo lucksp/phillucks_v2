@@ -1,4 +1,10 @@
 .projects {
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
   .card-deck {
     @media screen and (max-width: 576px) {
       flex-direction: row;

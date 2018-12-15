@@ -1,0 +1,21 @@
+.contact-info {
+  .contacts {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .contact {
+      width: 80px;
+      height: 80px;
+      background-size: 80px;
+      &#github {
+        background-image: url(../../public/assets/img/logo_github.svg);
+      }
+      &#email {
+        background-image: url(../../public/assets/img/logo_email.svg);
+      }
+      &#linkedin {
+        background-image: url(../../public/assets/img/logo_linkedin.svg);
+      }
+    }
+  }
+}

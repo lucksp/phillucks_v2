@@ -43,7 +43,9 @@ class Projects extends Component {
     return (
       <section className="projects">
         <Container>
-          <h2>Projects</h2>
+          <div className="projects-header">
+            <h2>Projects</h2>
+          </div>
           <CardDeck>{results}</CardDeck>
         </Container>
       </section>

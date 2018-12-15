@@ -1,6 +1,7 @@
 @import "./jumbotron";
 @import "./about";
 @import "./projects";
+@import "./contact";
 
 @import url("https://fonts.googleapis.com/css?family=Roboto|Open+Sans");
 
@@ -22,4 +23,11 @@ h5 {
 
 h1 {
   font-size: 4rem;
+}
+
+section {
+  padding: 56px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
