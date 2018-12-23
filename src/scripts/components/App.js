@@ -24,8 +24,8 @@ class App extends Component {
       <Provider store={store}>
         <div className="app">
           <Navibar refs={refs} />
+          <Jumbo />
           <main>
-            <Jumbo />
             <About setRef={el => (this.aboutRef = el)} />
             <Projects setRef={el => (this.projectsRef = el)} />
             <Contact setRef={el => (this.contactRef = el)} />

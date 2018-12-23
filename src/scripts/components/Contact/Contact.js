@@ -6,7 +6,7 @@ const Contact = props => {
     <section className="contact-info row" ref={props.setRef}>
       <Container>
         <div className="projects-header">
-          <h2>Projects</h2>
+          <h2>Contact</h2>
         </div>
         <Row>
           <div className="contacts">

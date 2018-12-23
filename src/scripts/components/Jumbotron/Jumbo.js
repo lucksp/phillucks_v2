@@ -7,8 +7,7 @@ const Jumbo = () => {
       <Container className="jumbo-content">
         <h1>Front-End Software Developer</h1>
         <p className="lead">
-          Striving for alignment at the intersection of UX, Business, and
-          Technology.
+          Living at the intersection of UX, Business, and Technology.
         </p>
       </Container>
     </Jumbotron>
