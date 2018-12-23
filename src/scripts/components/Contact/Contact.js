@@ -1,10 +1,13 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
 
-const Contact = () => {
+const Contact = props => {
   return (
-    <section className="contact-info row">
+    <section className="contact-info row" ref={props.setRef}>
       <Container>
+        <div className="projects-header">
+          <h2>Projects</h2>
+        </div>
         <Row>
           <div className="contacts">
             <a href="https://github.com/lucksp" target="_blank">

@@ -20,7 +20,19 @@ class Navibar extends Component {
       isOpen: !this.state.isOpen
     });
   };
+  handleClick = (e, scrollTo) => {
+    if (!e) return false;
+    e.preventDefault();
+
+    scrollTo.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  };
+
   render() {
+    const { aboutRef, projectsRef, contactRef } = { ...this.props.refs };
+
     return (
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">phlucks</NavbarBrand>
@@ -28,13 +40,36 @@ class Navibar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="#about">About</NavLink>
+              <NavLink
+                href="#about"
+                onClick={e => {
+                  this.handleClick(e, aboutRef);
+                }}
+              >
+                About
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#projects">Projects</NavLink>
+              <NavLink
+                href="#projects"
+                data={projectsRef}
+                onClick={e => {
+                  this.handleClick(e, projectsRef);
+                }}
+              >
+                Projects
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#contact">Contact</NavLink>
+              <NavLink
+                href="#contact"
+                data={contactRef}
+                onClick={e => {
+                  this.handleClick(e, contactRef);
+                }}
+              >
+                Contact
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

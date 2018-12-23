@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Navibar from "./Navbar/Navibar";
 import Jumbo from "./Jumbotron/Jumbo";
 import About from "./About/About";
@@ -8,18 +8,32 @@ import Contact from "./Contact/Contact";
 import { Provider } from "redux-zero/react";
 import store from "../redux-zero/store";
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <div className="app">
-        <Navibar />
-        <Jumbo />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
-    </Provider>
-  );
-};
+class App extends Component {
+  aboutRef = React.createRef();
+  projectsRef = React.createRef();
+  contactRef = React.createRef();
+
+  render() {
+    let refs = {
+      aboutRef: this.aboutRef,
+      projectsRef: this.projectsRef,
+      contactRef: this.contactRef
+    };
+
+    return (
+      <Provider store={store}>
+        <div className="app">
+          <Navibar refs={refs} />
+          <main>
+            <Jumbo />
+            <About setRef={el => (this.aboutRef = el)} />
+            <Projects setRef={el => (this.projectsRef = el)} />
+            <Contact setRef={el => (this.contactRef = el)} />
+          </main>
+        </div>
+      </Provider>
+    );
+  }
+}
 
 export default App;

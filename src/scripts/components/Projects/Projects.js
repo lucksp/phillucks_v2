@@ -41,7 +41,7 @@ class Projects extends Component {
       })
     );
     return (
-      <section className="projects">
+      <section className="projects" ref={this.props.setRef}>
         <Container>
           <div className="projects-header">
             <h2>Projects</h2>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "reactstrap";
 
-const About = () => {
+const About = props => {
   return (
-    <section className="about row">
+    <section className="about row" ref={props.setRef}>
       <Container>
         <h2>About</h2>
         <p>
