@@ -6,7 +6,7 @@ const About = props => {
     <section className="about row" ref={props.setRef}>
       <Container>
         <h2>About</h2>
-        <p>
+        <div>
           Building products with thoughtful User Experience at its core is my
           top priority. Seeing around corners, understanding the importance of a
           clean User Interface and working towards your business goals is how I
@@ -18,7 +18,7 @@ const About = props => {
           bike or on foot, travelling, listening to live music, photographing
           landscapes and urban environments, and sampling our state's fine
           selections of beer and whiskey options.
-        </p>
+        </div>
       </Container>
     </section>
   );

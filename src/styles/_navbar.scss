@@ -4,5 +4,16 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
+    .navbar-nav {
+      .nav-link {
+        color: #a8a7a7;
+        &:hover {
+          color: #e8175d;
+        }
+        &.active {
+          border-bottom: 2px solid #e8175d;
+        }
+      }
+    }
   }
 }

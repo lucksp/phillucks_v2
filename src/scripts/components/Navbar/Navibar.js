@@ -12,7 +12,8 @@ import {
 
 class Navibar extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
+    active: null
   };
   toggle = e => {
     e.preventDefault();
@@ -20,6 +21,7 @@ class Navibar extends Component {
       isOpen: !this.state.isOpen
     });
   };
+
   handleClick = (e, scrollTo) => {
     if (!e) return false;
     e.preventDefault();
@@ -28,6 +30,8 @@ class Navibar extends Component {
       behavior: "smooth",
       block: "start"
     });
+
+    this.setState({ active: e.target.name });
   };
 
   render() {
@@ -41,7 +45,9 @@ class Navibar extends Component {
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink
+                className={this.state.active === "about" ? "active" : ""}
                 href="#about"
+                name="about"
                 onClick={e => {
                   this.handleClick(e, aboutRef);
                 }}
@@ -51,7 +57,9 @@ class Navibar extends Component {
             </NavItem>
             <NavItem>
               <NavLink
+                className={this.state.active === "projects" ? "active" : ""}
                 href="#projects"
+                name="projects"
                 data={projectsRef}
                 onClick={e => {
                   this.handleClick(e, projectsRef);
@@ -62,7 +70,9 @@ class Navibar extends Component {
             </NavItem>
             <NavItem>
               <NavLink
+                className={this.state.active === "contact" ? "active" : ""}
                 href="#contact"
+                name="contact"
                 data={contactRef}
                 onClick={e => {
                   this.handleClick(e, contactRef);

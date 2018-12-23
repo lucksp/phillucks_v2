@@ -27,8 +27,17 @@ h1 {
 }
 
 section {
-  padding: 56px;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+main {
+  background-image: linear-gradient(
+    #a8a7a7,
+    #cc527a,
+    #e8175d,
+    #474747,
+    #363636
+  );
 }
