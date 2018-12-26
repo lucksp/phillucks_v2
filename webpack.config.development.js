@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -50,12 +51,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(png|svg|jpg|gif|svg)$/i,
         use: [
           {
             loader: "url-loader",
             options: {
-              limit: 8192,
               name: "[name].[ext]"
             }
           }
