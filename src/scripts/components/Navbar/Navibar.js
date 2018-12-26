@@ -28,6 +28,7 @@ class Navibar extends Component {
 
   handleScroll = e => {
     e.preventDefault();
+    //ToDo - add debounce
     this.checkForElementInView(e);
   };
 
