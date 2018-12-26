@@ -16,4 +16,14 @@ nav {
       }
     }
   }
+  #nav-color-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 56px;
+    width: 100vw;
+  }
+  .z-50 {
+    z-index: 50;
+  }
 }
