@@ -5,7 +5,7 @@ const About = props => {
   return (
     <section className="about row" ref={props.setRef}>
       <Container>
-        <h2>About</h2>
+        <h2 className="righteous">About</h2>
         <div>
           Building products with thoughtful User Experience at its core is my
           top priority. Seeing around corners, understanding the importance of a
