@@ -1,10 +1,7 @@
 const path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractSass = new ExtractTextPlugin({
-  filename: "css/style.css"
-});
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = env => {
   return {
@@ -28,18 +25,12 @@ module.exports = env => {
         },
         {
           test: /\.(css|scss)$/,
-          use: extractSass.extract({
-            use: [
-              {
-                loader: "css-loader"
-              },
-              {
-                loader: "sass-loader"
-              }
-            ],
-            // use style-loader in development
-            fallback: "style-loader"
-          })
+          use: [
+            "style-loader",
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader"
+          ]
         },
         {
           test: /\.(jpg|png|gif|svg|pdf)$/,
@@ -63,14 +54,8 @@ module.exports = env => {
         template: "public/index.html"
         // favicon: "public/favicon.ico"
       }),
-      new ExtractTextPlugin({
-        filename: "styles/styles.[contenthash].css",
-        allChunks: true
-      }),
-      extractSass,
-      new ExtractTextPlugin({
-        filename: "styles/styles.css",
-        allChunks: true
+      new MiniCssExtractPlugin({
+        filename: "style.css"
       })
     ],
     optimization: {
