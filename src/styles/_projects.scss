@@ -1,10 +1,4 @@
 .projects {
-  .projects-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
   .card-deck {
     @media screen and (max-width: 576px) {
       flex-direction: row;
@@ -12,6 +6,9 @@
     }
     .card {
       margin: 0 0 24px 0;
+      .card-title {
+        text-transform: capitalize;
+      }
       .card-subtitle {
         height: 3.6rem;
         line-height: 1.2;
@@ -42,10 +39,15 @@
             text-overflow: ellipsis;
             overflow: hidden;
           }
+          &.badge-info {
+            background-color: #cc527a;
+          }
         }
       }
       .button-repo {
         float: right;
+        background-color: #a8a7a7;
+        border: none;
       }
     }
   }

@@ -1,5 +1,6 @@
 .jumbotron {
   height: 75vh;
+  border-radius: 0;
   display: flex;
   margin-bottom: 0;
   margin-top: 56px;
@@ -11,9 +12,11 @@
   h1 {
     background-color: #cc527a;
     padding: 8px 32px;
+    font-size: 3rem;
   }
   .lead {
     font-size: 1.5rem;
+    color: #fefefe;
   }
 }
 

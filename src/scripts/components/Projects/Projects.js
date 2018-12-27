@@ -43,9 +43,7 @@ class Projects extends Component {
     return (
       <section className="projects" ref={this.props.setRef}>
         <Container>
-          <div className="projects-header">
-            <h2 className="righteous">Projects</h2>
-          </div>
+          <h2 className="righteous header vertical">Projects</h2>
           <CardDeck>{results}</CardDeck>
         </Container>
       </section>

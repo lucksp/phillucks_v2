@@ -18,16 +18,14 @@ body {
   font-family: "Righteous", cursive;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
 section {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-main {
-  background-image: linear-gradient(#a8a7a7, #e8175d, #363636);
+.header {
+  color: #474747;
+  font-size: 2rem;
 }

@@ -5,9 +5,7 @@ const Contact = props => {
   return (
     <section className="contact-info row" ref={props.setRef}>
       <Container>
-        <div className="projects-header">
-          <h2 className="righteous">Contact</h2>
-        </div>
+        <h2 className="righteous header vertical">Contact</h2>
         <Row>
           <div className="contacts">
             <a href="https://github.com/lucksp" target="_blank">
