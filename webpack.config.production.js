@@ -51,8 +51,8 @@ module.exports = env => {
         title: "Production"
       }),
       new HtmlWebpackPlugin({
-        template: "public/index.html"
-        // favicon: "public/favicon.ico"
+        template: "public/index.html",
+        favicon: "public/assets/img/favicon.ico"
       }),
       new MiniCssExtractPlugin({
         filename: "style.css"
