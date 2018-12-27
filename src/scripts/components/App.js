@@ -30,6 +30,16 @@ class App extends Component {
             <Projects setRef={el => (this.projectsRef = el)} />
             <Contact setRef={el => (this.contactRef = el)} />
           </main>
+          <footer
+            className="small center"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            ©Phil Lucks 2019
+          </footer>
         </div>
       </Provider>
     );
