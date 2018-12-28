@@ -4,7 +4,7 @@ import { connect } from "redux-zero/react";
 import actions from "../../redux-zero/actions";
 import { ProjectCards } from "./ProjectCards";
 
-import { Container, Row, CardDeck } from "reactstrap";
+import { Container, CardDeck } from "reactstrap";
 
 const mapToProps = ({ loading, data }) => ({ loading, data });
 

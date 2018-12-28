@@ -38,12 +38,6 @@ class App extends Component {
   };
 
   render() {
-    // let refs = {
-    //   aboutRef: this.aboutRef,
-    //   projectsRef: this.projectsRef,
-    //   contactRef: this.contactRef
-    // };
-
     return (
       <Provider store={store}>
         <div className="app">
