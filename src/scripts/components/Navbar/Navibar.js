@@ -35,6 +35,8 @@ class Navibar extends Component {
   checkForElementInView = e => {
     let active;
     for (let ref in this.props.refs) {
+      //FIXME - refs not appearing in production build
+      if (!ref.current) return false;
       let { top, bottom } = this.props.refs[ref].getBoundingClientRect();
       if (top < window.innerHeight && bottom >= 0) {
         switch (ref) {
