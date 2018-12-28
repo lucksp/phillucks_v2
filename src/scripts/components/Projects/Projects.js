@@ -11,8 +11,11 @@ const mapToProps = ({ loading, data }) => ({ loading, data });
 class Projects extends Component {
   state = { loading: this.props.loading };
 
+  navRef = React.createRef();
+
   componentDidMount() {
     this.props.fetchProjects();
+    this.props.setRef(this.navRef, this.props.name);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -41,7 +44,7 @@ class Projects extends Component {
       })
     );
     return (
-      <section className="projects" ref={this.props.setRef}>
+      <section className="projects" ref={this.navRef}>
         <Container>
           <h2 className="righteous header vertical">Projects</h2>
           <CardDeck>{results}</CardDeck>

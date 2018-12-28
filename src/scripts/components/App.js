@@ -9,26 +9,50 @@ import { Provider } from "redux-zero/react";
 import store from "../redux-zero/store";
 
 class App extends Component {
+  state = {
+    navRefs: {}
+  };
   aboutRef = React.createRef();
   projectsRef = React.createRef();
   contactRef = React.createRef();
 
+  handleRefs = (el, name) => {
+    let newRef = {};
+    switch (name) {
+      case "about":
+        this.aboutRef = el;
+        newRef = { aboutRef: this.aboutRef };
+        break;
+      case "projects":
+        this.projectsRef = el;
+        newRef = { projectsRef: this.projectsRef };
+        break;
+      case "contact":
+        this.contactRef = el;
+        newRef = { contactRef: this.contactRef };
+        break;
+    }
+    this.setState(prevState => ({
+      navRefs: { ...prevState.navRefs, ...newRef }
+    }));
+  };
+
   render() {
-    let refs = {
-      aboutRef: this.aboutRef,
-      projectsRef: this.projectsRef,
-      contactRef: this.contactRef
-    };
+    // let refs = {
+    //   aboutRef: this.aboutRef,
+    //   projectsRef: this.projectsRef,
+    //   contactRef: this.contactRef
+    // };
 
     return (
       <Provider store={store}>
         <div className="app">
-          <Navibar refs={refs} />
+          <Navibar refs={this.state.navRefs} />
           <Jumbo />
           <main>
-            <About setRef={el => (this.aboutRef = el)} />
-            <Projects setRef={el => (this.projectsRef = el)} />
-            <Contact setRef={el => (this.contactRef = el)} />
+            <About name="about" setRef={this.handleRefs} />
+            <Projects name="projects" setRef={this.handleRefs} />
+            <Contact name="contact" setRef={this.handleRefs} />
           </main>
           <footer
             className="small center"

@@ -35,9 +35,9 @@ class Navibar extends Component {
   checkForElementInView = e => {
     let active;
     for (let ref in this.props.refs) {
-      //FIXME - refs not appearing in production build
-      if (!ref.current) return false;
-      let { top, bottom } = this.props.refs[ref].getBoundingClientRect();
+      let { top, bottom } = this.props.refs[
+        ref
+      ].current.getBoundingClientRect();
       if (top < window.innerHeight && bottom >= 0) {
         switch (ref) {
           case "aboutRef":
@@ -118,7 +118,6 @@ class Navibar extends Component {
                 className={this.state.active === "projects" ? "active" : ""}
                 href="#projects"
                 name="projects"
-                data={projectsRef}
                 onClick={e => {
                   this.handleClick(e, projectsRef);
                 }}
@@ -131,7 +130,6 @@ class Navibar extends Component {
                 className={this.state.active === "contact" ? "active" : ""}
                 href="#contact"
                 name="contact"
-                data={contactRef}
                 onClick={e => {
                   this.handleClick(e, contactRef);
                 }}
