@@ -1,6 +1,10 @@
-@import "./variables.scss";
-@import "./navbar.scss";
-@import "./home.scss";
+@import "./jumbotron";
+@import "./about";
+@import "./projects";
+@import "./contact";
+@import "./navbar";
+
+@import url("https://fonts.googleapis.com/css?family=Righteous|Open+Sans");
 
 * {
   min-width: 0;
@@ -23,4 +27,24 @@
 #about,
 #projects {
   height: 75vh;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.righteous {
+  font-family: "Righteous", cursive;
+}
+
+section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  color: #474747;
+  font-size: 2rem;
 }
