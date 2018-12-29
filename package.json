@@ -1,8 +1,8 @@
 {
-  "name": "react_webpack_boilerplate",
+  "name": "phillucks_v2",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:lucksp/react_webpack_boilerplate.git",
+  "repository": "git@github.com:lucksp/phillucks_v2.git",
   "author": "Phil Lucks <lucksp@gmail.com>",
   "license": "MIT",
   "keywords": [

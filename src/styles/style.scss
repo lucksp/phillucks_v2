@@ -8,6 +8,25 @@
 
 * {
   min-width: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#about,
+#projects {
+  height: 75vh;
 }
 
 body {
