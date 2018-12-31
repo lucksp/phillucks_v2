@@ -18,7 +18,8 @@
   ],
   "scripts": {
     "dev": "node server/server.js",
-    "start": "webpack --env.NODE_ENV=production --env.production cross-env -p --config webpack.config.production.js && NODE_ENV=production node server/server.js"
+    "start": "NODE_ENV=production node server/server.js",
+    "heroku-postbuild": "webpack --env.NODE_ENV=production --env.production cross-env -p --config webpack.config.production.js"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
