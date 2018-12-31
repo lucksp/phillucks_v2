@@ -9,7 +9,7 @@ class About extends Component {
   }
   render() {
     return (
-      <section className="about row" ref={this.navRef}>
+      <section className="about" ref={this.navRef}>
         <Container>
           <h2 className="righteous header vertical">About</h2>
           <div>

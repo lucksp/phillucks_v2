@@ -10,7 +10,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="contact-info row" ref={this.navRef}>
+      <section className="contact-info" ref={this.navRef}>
         <Container>
           <h2 className="righteous header vertical">Contact</h2>
           <Row>
