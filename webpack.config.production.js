@@ -33,12 +33,14 @@ module.exports = env => {
           ]
         },
         {
-          test: /\.(jpg|png|gif|svg|pdf)$/,
+          test: /\.(gif|png|jpe?g|svg)$/i,
           use: [
+            "file-loader",
             {
-              loader: "file-loader",
+              loader: "image-webpack-loader",
               options: {
-                name: "[path][name].[ext]"
+                bypassOnDebug: true, // webpack@1.x
+                disable: true // webpack@2.x and newer
               }
             }
           ]
