@@ -74,7 +74,7 @@ class Navibar extends Component {
       scrollTo = document.body;
     }
 
-    scrollTo.scrollIntoView({
+    scrollTo.current.scrollIntoView({
       behavior: "smooth",
       block: "start"
     });
