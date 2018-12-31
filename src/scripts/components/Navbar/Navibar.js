@@ -38,7 +38,7 @@ class Navibar extends Component {
       let { top, bottom } = this.props.refs[
         ref
       ].current.getBoundingClientRect();
-      if (top < window.innerHeight && bottom >= 0) {
+      if (top < window.innerHeight * 0.7 && bottom >= 0) {
         switch (ref) {
           case "aboutRef":
             active = "about";
@@ -59,8 +59,7 @@ class Navibar extends Component {
     this.setState({ active });
   };
 
-  toggle = e => {
-    e.preventDefault();
+  toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -78,6 +77,10 @@ class Navibar extends Component {
       behavior: "smooth",
       block: "start"
     });
+
+    if (this.state.isOpen) {
+      this.toggle();
+    }
   };
 
   render() {
