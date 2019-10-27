@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/lucksp/phillucks_v2#readme",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.17.4",
+    "gatsby-plugin-styled-components": "^3.1.11",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.0"
   }
 }
