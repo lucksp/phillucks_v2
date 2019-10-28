@@ -4,7 +4,7 @@
   "description": "lucksp website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,14 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^4.1.19",
+    "gatsby-plugin-tslint": "0.0.2",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "tslint": "^5.20.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.4"
   }
 }
