@@ -4,10 +4,15 @@ import { string } from "prop-types";
 
 interface IButtonProps {
   text: string;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ text }: IButtonProps) => {
-  return <StyledButton type="button">{text}</StyledButton>;
+const Button = ({ text, onClick }: IButtonProps) => {
+  return (
+    <StyledButton type="button" onClick={onClick}>
+      {text}
+    </StyledButton>
+  );
 };
 
 export default Button;
