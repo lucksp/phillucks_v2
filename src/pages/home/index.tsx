@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <StyledHome ref={homeRef}>
       <div id="text-wrapper">
-        <StyledFirstName scrollY={scrollY}>Phil</StyledFirstName>
+        <StyledFirstName scrollY={scrollY}>Philip</StyledFirstName>
         <StyledLastName scrollY={scrollY}>Lucks</StyledLastName>
       </div>
       <Button text="clicker" onClick={handleClick} />
