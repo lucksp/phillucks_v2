@@ -1,15 +1,10 @@
 import styled from "styled-components";
 import bgImg from "../../assets/home_bg.jpg";
-import { number } from "prop-types";
-
-interface IScrollProps {
-  scrollY: number;
-}
 
 export const StyledHome = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
   font-family: "Righteous", cursive;
-  font-size: 96px;
+  font-size: 8em;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -19,6 +14,10 @@ export const StyledHome = styled.div`
   justify-content: space-between;
   background: url(${bgImg}) no-repeat center;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
 
   &:before {
     width: 100%;
@@ -41,19 +40,28 @@ export const StyledHome = styled.div`
   }
 `;
 
+interface IScrollProps {
+  scrollY: number;
+}
+
 export const StyledFirstName = styled.div.attrs<IScrollProps>(
   ({ scrollY }) => ({
-    style: { transform: `translateX(-${scrollY}px)` }
+    style: {
+      transform: `translateX(-${scrollY}px)`
+    }
   })
-)`
+)<IScrollProps>`
   text-transform: uppercase;
   color: #f2f0d5;
   margin-left: -80px;
   margin-right: 0;
 `;
+
 export const StyledLastName = styled.div.attrs<IScrollProps>(({ scrollY }) => ({
-  style: { transform: `translateX(${scrollY}px)` }
-}))`
+  style: {
+    transform: `translateX(${scrollY}px)`
+  }
+}))<IScrollProps>`
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 2px #f2f0d5;
