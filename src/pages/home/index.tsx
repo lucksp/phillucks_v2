@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
-import { StyledHome, StyledFirstName, StyledLastName } from "./home.css";
-import Button from "../../components/button";
+import {
+  StyledHome,
+  StyledFirstName,
+  StyledLastName,
+  HomeButton,
+  StyledBackground
+} from "./home.css";
 import {
   VerticalScrollContextProvider,
   useScrollState
@@ -11,7 +16,7 @@ const Home = () => {
   let homeRef = React.useRef<HTMLDivElement | null>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log("clicked button");
   };
   return (
@@ -20,7 +25,13 @@ const Home = () => {
         <StyledFirstName scrollY={scrollY}>Philip</StyledFirstName>
         <StyledLastName scrollY={scrollY}>Lucks</StyledLastName>
       </div>
-      <Button text="clicker" onClick={handleClick} />
+      <HomeButton
+        className="button-home"
+        text="Find out more"
+        onClick={handleClick}
+        alt="more button"
+      />
+      <StyledBackground />
     </StyledHome>
   );
 };
