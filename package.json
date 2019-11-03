@@ -4,7 +4,8 @@
   "description": "lucksp website",
   "main": "index.js",
   "scripts": {
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {
     "type": "git",

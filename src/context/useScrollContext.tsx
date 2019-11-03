@@ -1,6 +1,4 @@
 import React, { useState, FC, useEffect } from "react";
-import { debounce } from "../utils";
-import { func } from "prop-types";
 
 interface IInitialContext {
   scrollY: number;

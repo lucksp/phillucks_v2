@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   StyledHome,
   StyledFirstName,
@@ -6,18 +6,24 @@ import {
   HomeButton,
   StyledBackground
 } from "./home.css";
+
 import {
   VerticalScrollContextProvider,
   useScrollState
 } from "../../context/useScrollContext";
 
-const Home = () => {
+interface IHomeProps {
+  moreScrollHandler: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Home = ({ moreScrollHandler }: IHomeProps) => {
   const { scrollY } = useScrollState();
   let homeRef = React.useRef<HTMLDivElement | null>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // e.preventDefault();
+    e.preventDefault();
     console.log("clicked button");
+    moreScrollHandler(e);
   };
   return (
     <StyledHome ref={homeRef}>
@@ -36,8 +42,8 @@ const Home = () => {
   );
 };
 
-export default () => (
+export default (props: IHomeProps) => (
   <VerticalScrollContextProvider>
-    <Home />
+    <Home {...props} />
   </VerticalScrollContextProvider>
 );
