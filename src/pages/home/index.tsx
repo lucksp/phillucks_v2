@@ -22,7 +22,6 @@ const Home = ({ moreScrollHandler }: IHomeProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log("clicked button");
     moreScrollHandler(e);
   };
   return (
