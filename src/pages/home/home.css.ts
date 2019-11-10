@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bgImg from "../../assets/home_bg.jpg";
 import Button from "../../components/button";
 
-export const StyledHome = styled.div`
+export const StyledHome = styled.section`
   @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
   font-family: "Righteous", cursive;
   font-size: 8em;
@@ -62,11 +62,13 @@ export const StyledFirstName = styled.div.attrs<IScrollProps>(
   margin-right: 0;
 `;
 
-export const StyledLastName = styled.div.attrs<IScrollProps>(({ scrollY }) => ({
-  style: {
-    transform: `translateX(${scrollY}px)`
-  }
-}))<IScrollProps>`
+export const StyledLastName = styled.section.attrs<IScrollProps>(
+  ({ scrollY }) => ({
+    style: {
+      transform: `translateX(${scrollY}px)`
+    }
+  })
+)<IScrollProps>`
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 2px #f2f0d5;

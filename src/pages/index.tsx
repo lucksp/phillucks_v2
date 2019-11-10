@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./home";
 import { Global } from "../Global.css";
 import About from "./about";
+import Portfolio from "./portfolio";
 
 export default () => {
   let moreRef = React.useRef<HTMLDivElement | null>(null);
@@ -18,6 +19,7 @@ export default () => {
       <Global />
       <Home moreScrollHandler={moreScrollHandler} />
       <About ref={moreRef} />
+      <Portfolio />
     </>
   );
 };

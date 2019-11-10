@@ -18,13 +18,13 @@ const parseJson = (response: Response) => {
 export const fetchWrapper = async <T>(
   url: string,
   options: RequestInit
-): Promise<T> => {
+): Promise<any> => {
   var data = await fetch(url, options)
     .then(checkHttpStatus)
     .then(parseJson)
     .then(data => {
-      return data;
+      return data as T;
     })
-    .catch((error: any) => error);
+    .catch(error => error as T);
   return data;
 };
