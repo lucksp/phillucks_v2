@@ -3,6 +3,9 @@ import Home from "./home";
 import { Global } from "../Global.css";
 import About from "./about";
 import Portfolio from "./portfolio";
+import { ThemeProvider, DefaultTheme } from "styled-components";
+import { theme } from "./theme";
+import { VerticalGitHubContextProvider } from "../context/useGitHubContext";
 
 export default () => {
   let moreRef = React.useRef<HTMLDivElement | null>(null);
@@ -15,11 +18,13 @@ export default () => {
     }
   };
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Global />
       <Home moreScrollHandler={moreScrollHandler} />
       <About ref={moreRef} />
-      <Portfolio />
-    </>
+      <VerticalGitHubContextProvider>
+        <Portfolio />
+      </VerticalGitHubContextProvider>
+    </ThemeProvider>
   );
 };

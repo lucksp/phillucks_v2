@@ -3,8 +3,7 @@ import bgImg from "../../assets/home_bg.jpg";
 import Button from "../../components/button";
 
 export const StyledHome = styled.section`
-  @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
-  font-family: "Righteous", cursive;
+  font-family: ${p => p.theme.fonts.righteous};
   font-size: 8em;
   height: 100vh;
   width: 100vw;
@@ -35,7 +34,7 @@ export const StyledBackground = styled.div`
   width: 100%;
   height: 100%;
   content: " ";
-  background-color: #9b91f2;
+  background-color: ${props => props.theme.colors.purple1};
   position: absolute;
   top: 0;
   right: 0;

@@ -1,43 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { StyledPortfolio } from "./portfolio.css";
-import {
-  getGithubUserData,
-  IGithubUserData,
-  TGithubUserDataItem
-} from "../../api";
+
+import { GitHubContext } from "../../context/useGitHubContext";
+import GitHubItem from "./GitHubItem";
 
 const Portfolio = () => {
-  const [data, setData] = useState<IGithubUserData>([]);
+  const { data } = useContext(GitHubContext);
 
-  useEffect(() => {
-    async function getProjectData() {
-      const data = await getGithubUserData();
-      const filteredData = getFilteredData(data);
+  // useEffect(() => {
+  //   if (data.length) {
+  //     const foundFilters = data.map(filters => filters.topics).flat();
+  //     setFilters(new Set(foundFilters));
+  //   }
+  // }, [data]);
 
-      setData(filteredData);
-    }
-    getProjectData();
-  }, []);
+  // const handleChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  // };
 
   return (
     <StyledPortfolio>
       <div>
         <h4>Front-End JavaScript Engineer</h4>
-        <div>projects</div>
+        <div id="item-wrapper">
+          {data &&
+            data.map(item => {
+              return <GitHubItem item={item} key={item.id} />;
+            })}
+        </div>
       </div>
     </StyledPortfolio>
   );
 };
 
 export default Portfolio;
-
-function getFilteredData(data: IGithubUserData): IGithubUserData {
-  return data
-    .filter((item: TGithubUserDataItem) => {
-      return (
-        item.topics.length &&
-        item.topics.find(topic => topic.toLowerCase() !== "donottrack")
-      );
-    })
-    .slice(0, 9);
-}
