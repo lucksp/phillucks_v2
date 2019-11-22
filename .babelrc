@@ -1,9 +1,0 @@
-{
-  "presets": [["env", { "modules": false }], "react", "stage-1"],
-  "env": {
-    "production": {
-      "presets": ["minify"]
-    }
-  },
-  "plugins": ["react-hot-loader/babel", "transform-es2015-spread"]
-}
