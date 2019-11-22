@@ -4,5 +4,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-react-helmet`
-  ]
+  ],
+  pathPrefix: "/phillucks_v2"
 };
