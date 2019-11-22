@@ -11,6 +11,12 @@ export const StyledGHCard = styled(Card)`
   height: 320px;
   display: flex;
   flex-flow: column;
+
+  @media (max-width: ${p => p.theme.size.tablet}) {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 `;
 
 export const StyledGHBodyItem = styled(StyledCardBody)`

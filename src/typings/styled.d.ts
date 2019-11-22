@@ -4,6 +4,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       purple1: string;
+      purple2: string;
       yellow1: string;
       blue1: string;
       almost_black: string;
@@ -14,6 +15,12 @@ declare module "styled-components" {
     fonts: {
       base: string;
       righteous: string;
+    };
+    size: {
+      mobileL: string;
+      tablet: string;
+      laptop: string;
+      laptopL: string;
     };
   }
 }
