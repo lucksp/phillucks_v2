@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./home";
 import { Global } from "../Global.css";
+import { Helmet } from "react-helmet";
 import About from "./about";
 import Portfolio from "./portfolio";
 import { ThemeProvider, DefaultTheme } from "styled-components";
@@ -19,14 +20,26 @@ export default () => {
     }
   };
   return (
-    <ThemeProvider theme={theme}>
-      <Global />
-      <Home moreScrollHandler={moreScrollHandler} />
-      <About ref={moreRef} />
-      <VerticalGitHubContextProvider>
-        <Portfolio />
-      </VerticalGitHubContextProvider>
-      <Footer />
-    </ThemeProvider>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Phil Lucks: Front End Software Engineer</title>
+        <meta
+          name="description"
+          content="
+          Phil Lucks, software engineer, software developer, denver software"
+        />
+      </Helmet>
+      <ThemeProvider theme={theme}>
+        <Global />
+        <Home moreScrollHandler={moreScrollHandler} />
+        <About ref={moreRef} />
+        <VerticalGitHubContextProvider>
+          <Portfolio />
+        </VerticalGitHubContextProvider>
+        <Footer />
+      </ThemeProvider>
+    </>
   );
 };
