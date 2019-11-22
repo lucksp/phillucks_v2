@@ -6,6 +6,7 @@ import Portfolio from "./portfolio";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import { theme } from "./theme";
 import { VerticalGitHubContextProvider } from "../context/useGitHubContext";
+import Footer from "./footer";
 
 export default () => {
   let moreRef = React.useRef<HTMLDivElement | null>(null);
@@ -25,6 +26,7 @@ export default () => {
       <VerticalGitHubContextProvider>
         <Portfolio />
       </VerticalGitHubContextProvider>
+      <Footer />
     </ThemeProvider>
   );
 };

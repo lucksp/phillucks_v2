@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledPortfolio = styled.section`
-  height: 100vh;
   padding: 80px;
   background-color: ${p => p.theme.colors.purple2};
   background: linear-gradient(
@@ -10,7 +9,7 @@ export const StyledPortfolio = styled.section`
     ${p => p.theme.colors.yellow1}
   );
   @media (max-width: ${p => p.theme.size.tablet}) {
-    margin: 16px;
+    padding: 16px;
   }
 
   #item-wrapper {
