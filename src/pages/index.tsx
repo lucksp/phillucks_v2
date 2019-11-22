@@ -4,7 +4,8 @@ import { Global } from "../Global.css";
 import { Helmet } from "react-helmet";
 import About from "./about";
 import Portfolio from "./portfolio";
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import favicon from "../assets/favicon.ico";
 import { theme } from "./theme";
 import { VerticalGitHubContextProvider } from "../context/useGitHubContext";
 import Footer from "./footer";
@@ -30,6 +31,7 @@ export default () => {
           content="
           Phil Lucks, software engineer, software developer, denver software"
         />
+        <link rel="icon" href={favicon} />
       </Helmet>
       <ThemeProvider theme={theme}>
         <Global />
