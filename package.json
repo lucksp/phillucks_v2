@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/lucksp/phillucks_v2#readme",
   "dependencies": {
-    "@types/react-helmet": "^5.0.14",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.17.4",
     "gatsby-plugin-react-helmet": "^3.1.15",
@@ -35,6 +34,7 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^5.0.14",
     "@types/styled-components": "^4.4.0",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.15",
