@@ -29,7 +29,7 @@ export default () => {
         <meta
           name="description"
           content="
-          Phil Lucks, software engineer, software developer, denver software"
+          Phil Lucks, frontend developer, software engineer, software developer, denver software"
         />
         <link rel="icon" href={favicon} />
       </Helmet>

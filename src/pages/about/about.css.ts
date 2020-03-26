@@ -28,3 +28,5 @@ export const AboutContents = styled.div`
     font-size: 18px;
   }
 `;
+
+export default StyledAbout;

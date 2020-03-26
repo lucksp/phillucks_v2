@@ -84,3 +84,5 @@ export const HomeButton = styled(Button)`
   border: 2px solid #f2f0d5;
   background: #1c4d8c;
 `;
+
+export default StyledHome;
