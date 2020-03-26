@@ -3,8 +3,13 @@ import React, { useState, FC, useEffect } from "react";
 interface IInitialContext {
   scrollY: number;
 }
+
+let scrollY = 0;
+if (typeof window !== "undefined") {
+  scrollY = window.scrollY;
+}
 const intialContext = {
-  scrollY: window.scrollY,
+  scrollY,
   checkScroll: true
 };
 
@@ -35,10 +40,6 @@ function useScrollState() {
     );
   }
   return context;
-}
-
-function removeEventListener() {
-  const context = React.useContext(ScrollContext);
 }
 
 export { VerticalScrollContextProvider, useScrollState };

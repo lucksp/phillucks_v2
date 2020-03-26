@@ -3,7 +3,13 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
-    `gatsby-plugin-react-helmet`
-  ],
-  pathPrefix: "/phillucks_v2"
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {
+        fileName: false,
+        pure: true
+      }
+    }
+  ]
 };

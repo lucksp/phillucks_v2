@@ -13,7 +13,7 @@ const FOOTERITEMS = {
 
 const svgDimension = "40px";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <StyledFooter>
       <FooterItem>

@@ -6,7 +6,7 @@ export interface IGitHubItemProps {
   item: TGithubUserDataItem;
 }
 
-const GitHubItem: React.FC<IGitHubItemProps> = ({ item }) => {
+export const GitHubItem: React.FC<IGitHubItemProps> = ({ item }) => {
   return (
     <StyledGHCard
       className="gh-card"
