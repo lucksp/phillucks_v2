@@ -5,7 +5,6 @@ import { StyledCardBody } from "../../components/card/card.css";
 
 export const StyledGHCard = styled(Card)`
   max-width: 240px;
-  height: 320px;
   display: flex;
   flex-flow: column;
 

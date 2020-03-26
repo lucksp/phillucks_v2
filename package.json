@@ -4,6 +4,8 @@
   "description": "lucksp website",
   "main": "index.js",
   "scripts": {
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
@@ -36,6 +38,9 @@
   "devDependencies": {
     "@types/react-helmet": "^5.0.14",
     "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.15",
     "gh-pages": "^2.1.1",

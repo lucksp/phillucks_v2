@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { StyledAbout, AboutContents } from "./about.css";
+import { AboutContents, StyledAbout } from "./about.css";
 
 const About = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
   return (

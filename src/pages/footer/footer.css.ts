@@ -11,3 +11,5 @@ export const StyledFooter = styled.footer`
 export const StyledFooterItem = styled.div`
   cursor: pointer;
 `;
+
+export default StyledFooter;
