@@ -25,3 +25,5 @@ export const StyledGHBodyItem = styled(StyledCardBody)`
 `;
 
 export const StyledGHPill = styled(Pill)``;
+
+export default StyledGHBodyItem;
