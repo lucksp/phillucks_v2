@@ -5,3 +5,5 @@ export const StyledButton = styled.button`
   cursor: pointer;
   outline: 0;
 `;
+
+export default StyledButton;

@@ -11,3 +11,5 @@ export const StyledPill = styled.div`
   align-item: center;
   justify-content: center;
 `;
+
+export default StyledPill;
