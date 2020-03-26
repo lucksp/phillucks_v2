@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "gatsby develop",
-    "serve": "gatsby serve",
+    "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "clear:cache": "gatsby clean"
   },
   "repository": {
     "type": "git",

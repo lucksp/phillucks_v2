@@ -6,7 +6,7 @@ export interface IPillProps {
   className?: string;
 }
 
-const Pill: React.FC<IPillProps> = ({
+export const Pill: React.FC<IPillProps> = ({
   handeClick,
   children,
   className = ""

@@ -8,7 +8,12 @@ interface IButtonProps {
   alt?: string;
 }
 
-const Button = ({ text, onClick, alt, className = "" }: IButtonProps) => {
+export const Button = ({
+  text,
+  onClick,
+  alt,
+  className = ""
+}: IButtonProps) => {
   return (
     <StyledButton
       type="button"

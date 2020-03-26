@@ -4,7 +4,7 @@ import { StyledPortfolio } from "./portfolio.css";
 import { GitHubContext } from "../../context/useGitHubContext";
 import GitHubItem from "./GitHubItem";
 
-const Portfolio = () => {
+export const Portfolio = () => {
   const { data } = useContext(GitHubContext);
 
   // useEffect(() => {

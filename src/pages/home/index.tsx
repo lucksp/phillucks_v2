@@ -7,16 +7,13 @@ import {
   StyledBackground
 } from "./home.css";
 
-import {
-  VerticalScrollContextProvider,
-  useScrollState
-} from "../../context/useScrollContext";
+import { useScrollState } from "../../context/useScrollContext";
 
 interface IHomeProps {
   moreScrollHandler: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Home = ({ moreScrollHandler }: IHomeProps) => {
+export const Home = ({ moreScrollHandler }: IHomeProps) => {
   const { scrollY } = useScrollState();
   let homeRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -41,8 +38,4 @@ const Home = ({ moreScrollHandler }: IHomeProps) => {
   );
 };
 
-export default (props: IHomeProps) => (
-  <VerticalScrollContextProvider>
-    <Home {...props} />
-  </VerticalScrollContextProvider>
-);
+export default Home;

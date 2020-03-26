@@ -13,7 +13,7 @@ interface ICardProps {
   className?: string;
 }
 
-const Card: React.FC<ICardProps> = ({
+export const Card: React.FC<ICardProps> = ({
   cardTitle,
   cardBody,
   cardFooter,
