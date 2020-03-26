@@ -22,3 +22,5 @@ export const theme: DefaultTheme = {
     laptopL: "1440px"
   }
 };
+
+export default theme;
