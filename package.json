@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "clear:cache": "gatsby clean"
   },
   "repository": {

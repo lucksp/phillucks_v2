@@ -11,5 +11,6 @@ module.exports = {
         pure: true
       }
     }
-  ]
+  ],
+  pathPrefix: "/phillucks_v2"
 };
