@@ -24,3 +24,5 @@ export const StyledPortfolio = styled.section`
     }
   }
 `;
+
+export default StyledPortfolio;

@@ -33,3 +33,5 @@ export const StyledCardFooter = styled.div`
     color: ${p => p.theme.colors.purple1};
   }
 `;
+
+export default StyledCard;
