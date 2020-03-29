@@ -1,0 +1,53 @@
+{
+  "name": "phillucks_v2",
+  "version": "2.0.0",
+  "description": "lucksp website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "clear:cache": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucksp/phillucks_v2.git"
+  },
+  "keywords": [
+    "react",
+    "gatsby"
+  ],
+  "author": "phil lucks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucksp/phillucks_v2/issues"
+  },
+  "homepage": "https://github.com/lucksp/phillucks_v2#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.17.4",
+    "gatsby-plugin-react-helmet": "^3.1.15",
+    "gatsby-plugin-styled-components": "^3.1.11",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-inlinesvg": "^1.2.0",
+    "styled-components": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^5.0.14",
+    "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "gatsby-plugin-tslint": "0.0.2",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "gh-pages": "^2.1.1",
+    "tslint": "^5.20.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.4"
+  }
+}
