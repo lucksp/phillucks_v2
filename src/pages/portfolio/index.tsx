@@ -1,24 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, forwardRef } from "react";
 import { StyledPortfolio } from "./portfolio.css";
 
 import { GitHubContext } from "../../context/useGitHubContext";
 import GitHubItem from "./GitHubItem";
 
-export const Portfolio = () => {
+export const Portfolio = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
   const { data } = useContext(GitHubContext);
-
-  // useEffect(() => {
-  //   if (data.length) {
-  //     const foundFilters = data.map(filters => filters.topics).flat();
-  //     setFilters(new Set(foundFilters));
-  //   }
-  // }, [data]);
-
-  // const handleChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  // };
-
   return (
-    <StyledPortfolio>
+    <StyledPortfolio ref={ref}>
       <div>
         <h4>Front-End JavaScript Engineer</h4>
         <div id="item-wrapper">
@@ -30,6 +19,6 @@ export const Portfolio = () => {
       </div>
     </StyledPortfolio>
   );
-};
+});
 
 export default Portfolio;

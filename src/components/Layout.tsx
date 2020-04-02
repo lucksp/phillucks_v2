@@ -9,6 +9,7 @@ import Footer from "../pages/footer";
 
 const Layout: FC = () => {
   let moreRef = React.useRef<HTMLDivElement>(null);
+  let portRef = React.useRef<HTMLDivElement>(null);
 
   const moreScrollHandler = (e: React.MouseEvent) => {
     if (e.target && moreRef) {
@@ -17,15 +18,24 @@ const Layout: FC = () => {
       });
     }
   };
+
+  const portfolioScrollHandler = (e: React.MouseEvent) => {
+    if (e.target && moreRef) {
+      portRef.current!.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <>
       <Helmet />
       <VerticalScrollContextProvider>
         <Home moreScrollHandler={moreScrollHandler} />
       </VerticalScrollContextProvider>
-      <About ref={moreRef} />
+      <About ref={moreRef} portfolioScrollHandler={portfolioScrollHandler} />
       <VerticalGitHubContextProvider>
-        <Portfolio />
+        <Portfolio ref={portRef} />
       </VerticalGitHubContextProvider>
       <Footer />
     </>

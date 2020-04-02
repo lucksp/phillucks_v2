@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../../components/button";
 
 export const StyledAbout = styled.section`
   height: 100vh;
@@ -24,9 +25,22 @@ export const StyledAbout = styled.section`
 
 export const AboutContents = styled.div`
   font-size: 24px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   @media (max-width: ${p => p.theme.size.tablet}) {
     font-size: 18px;
   }
+`;
+
+export const PortfolioButton = styled(Button)`
+  font-size: 1em;
+  margin-top: 1.25em;
+  padding: 16px 32px;
+  color: #f2f0d5;
+  border: 2px solid #f2f0d5;
+  background: #1c4d8c;
 `;
 
 export default StyledAbout;
