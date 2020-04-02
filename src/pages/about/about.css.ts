@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Button from "../../components/button";
 
 export const StyledAbout = styled.section`
-  height: 100vh;
   padding: 80px;
   display: flex;
   align-items: center;
