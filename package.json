@@ -8,7 +8,6 @@
     "build": "gatsby build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "deploy": "gatsby build && gh-pages -d public -b master",
     "clear:cache": "gatsby clean"
   },
   "repository": {
@@ -44,7 +43,6 @@
     "eslint": "^6.8.0",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.15",
-    "gh-pages": "^2.1.1",
     "tslint": "^5.20.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.1.0",
