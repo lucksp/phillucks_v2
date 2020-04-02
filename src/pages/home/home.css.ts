@@ -15,6 +15,7 @@ export const StyledHome = styled.section`
   background: url(${bgImg}) no-repeat center;
   background-size: cover;
   z-index: 50;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     font-size: 4em;
