@@ -1,3 +1,7 @@
+## Requirements:
+- Install [Gatsby](https://www.gatsbyjs.com) per requirements.
+- Run `yarn` to install dependencies
+
 ## Start development server:
 
     `gatsby develop`

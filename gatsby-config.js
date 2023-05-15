@@ -10,6 +10,6 @@ module.exports = {
         fileName: false,
         pure: true
       }
-    }
+    },
   ]
 };

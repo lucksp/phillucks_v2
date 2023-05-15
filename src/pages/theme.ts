@@ -12,8 +12,8 @@ export const theme: DefaultTheme = {
     light_gray: "#cdcdcd"
   },
   fonts: {
-    base: "'Montserrat', sans-serif",
-    righteous: "'Righteous', cursive"
+    base: `'Montserrat', sans-serif`,
+    righteous: `'Righteous', cursive`
   },
   size: {
     mobileL: "425px",
