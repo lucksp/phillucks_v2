@@ -18,7 +18,7 @@ module.exports = {
           `Righteous`,
           `Montserrat\:300,400`
         ],
-        display: 'swap'
+        display: 'block'
       }
     }
   ]
