@@ -1,7 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Phil Lucks, Front End Engineer`
-  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
@@ -20,7 +17,7 @@ module.exports = {
         options: {
           fonts: [
             `Righteous,`,
-            `Montserrat\:300,400` // you can also specify font weights and styles
+            `Montserrat\:300,400`
           ],
           display: 'block'
         }
