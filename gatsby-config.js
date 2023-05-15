@@ -11,15 +11,5 @@ module.exports = {
         pure: true
       }
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Righteous`,
-          `Montserrat\:300,400`
-        ],
-        display: 'block'
-      }
-    }
   ]
 };

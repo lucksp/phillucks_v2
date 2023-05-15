@@ -25,9 +25,10 @@
   },
   "homepage": "https://github.com/lucksp/phillucks_v2#readme",
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/righteous": "^4.5.7",
     "babel-plugin-styled-components": "^2.1.1",
     "gatsby": "^5.9.1",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^6.9.0",
     "gatsby-plugin-styled-components": "^6.9.0",
     "octokit": "^2.0.14",
