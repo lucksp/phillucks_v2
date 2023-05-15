@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren } from "react";
 import { StyledFooter, StyledFooterItem } from "./footer.css";
 import SVG from "react-inlinesvg";
 import linkedInIcon from "../../assets/icn-linkedin.svg";
@@ -56,7 +56,7 @@ export const Footer = () => {
 interface IFooterProps {
   handleClick?: (e: React.MouseEvent) => void;
 }
-const FooterItem: React.FC<IFooterProps> = ({ children, handleClick }) => {
+const FooterItem = ({ children, handleClick }: PropsWithChildren<IFooterProps>) => {
   return (
     <StyledFooterItem>
       <div onClick={handleClick}>{children}</div>

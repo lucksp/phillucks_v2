@@ -1,4 +1,4 @@
-import React, { useState, FC, useEffect } from "react";
+import React, { useState, FC, useEffect, ReactNode } from "react";
 
 interface IInitialContext {
   scrollY: number;
@@ -15,7 +15,7 @@ const intialContext = {
 
 const ScrollContext = React.createContext<IInitialContext>(intialContext);
 
-const VerticalScrollContextProvider: FC = ({ children }) => {
+const VerticalScrollContextProvider = ({ children }: {children: ReactNode}) => {
   const [scrollY, setScrollY] = useState(intialContext.scrollY);
 
   useEffect(() => {
