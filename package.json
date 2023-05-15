@@ -25,27 +25,28 @@
   },
   "homepage": "https://github.com/lucksp/phillucks_v2#readme",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
-    "gatsby": "^2.17.4",
-    "gatsby-plugin-react-helmet": "^3.1.15",
-    "gatsby-plugin-styled-components": "^3.1.11",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "react-inlinesvg": "^1.2.0",
-    "styled-components": "^4.4.0"
+    "gatsby": "^5.9.1",
+    "gatsby-plugin-react-helmet": "^6.9.0",
+    "gatsby-plugin-styled-components": "^6.9.0",
+    "octokit": "^2.0.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-inlinesvg": "^3.0.2",
+    "styled-components": "^6.0.0-rc.1"
   },
   "devDependencies": {
-    "@types/react-helmet": "^5.0.14",
-    "@types/styled-components": "^4.4.0",
+    "@types/react-helmet": "^6.1.6",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "babel-plugin-styled-components": "^2.1.1",
     "eslint": "^6.8.0",
-    "gatsby-plugin-tslint": "0.0.2",
-    "gatsby-plugin-typescript": "^2.1.15",
-    "tslint": "^5.20.0",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "gatsby-plugin-typescript": "^5.9.0",
+    "tslint": "^6.1.3",
     "tslint-loader": "^3.5.4",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.6.4"
+    "tslint-react": "^5.0.0",
+    "typescript": "^5.0.4"
   }
 }

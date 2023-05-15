@@ -1,4 +1,4 @@
-import React, { useState, FC, useEffect } from "react";
+import React, { useState, FC, useEffect, ReactNode } from "react";
 import {
   getGithubUserData,
   IGithubUserData,
@@ -16,15 +16,29 @@ export const GitHubContext = React.createContext<IInitialContext>(
   intialContext
 );
 
-const VerticalGitHubContextProvider: FC = ({ children }) => {
+function getFilteredData(data: IGithubUserData): IGithubUserData {
+  console.log(data);
+  
+  return data
+    .filter((item: TGithubUserDataItem) => {
+      return (
+        item.topics.length &&
+        item.topics.find(topic => topic.toLowerCase() !== "donottrack")
+      );
+    })
+    .slice(0, 9);
+}
+
+const VerticalGitHubContextProvider = ({ children }: {children: ReactNode}) => {
   const [data, setData] = useState(intialContext.data);
 
   useEffect(() => {
     async function getProjectData() {
       const data = await getGithubUserData();
       const filteredData = getFilteredData(data);
+      const sorted = filteredData.sort((a, b) => a.name > b.name ? 1 : -1)
 
-      setData(filteredData);
+      setData(sorted);
     }
     getProjectData();
   }, []);
@@ -36,13 +50,4 @@ const VerticalGitHubContextProvider: FC = ({ children }) => {
 
 export { VerticalGitHubContextProvider };
 
-function getFilteredData(data: IGithubUserData): IGithubUserData {
-  return data
-    .filter((item: TGithubUserDataItem) => {
-      return (
-        item.topics.length &&
-        item.topics.find(topic => topic.toLowerCase() !== "donottrack")
-      );
-    })
-    .slice(0, 9);
-}
+
