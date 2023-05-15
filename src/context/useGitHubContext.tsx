@@ -17,8 +17,6 @@ export const GitHubContext = React.createContext<IInitialContext>(
 );
 
 function getFilteredData(data: IGithubUserData): IGithubUserData {
-  console.log(data);
-  
   return data
     .filter((item: TGithubUserDataItem) => {
       return (

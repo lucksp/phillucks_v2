@@ -105,7 +105,6 @@ export const getGithubUserData = async (): Promise<any> => {
   const data = await octokit.request('GET /users/{username}/repos', {
     username: 'lucksp'
   })
-  console.log(data);
   
   return data.data;
 };
